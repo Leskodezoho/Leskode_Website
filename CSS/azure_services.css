@@ -1,0 +1,501 @@
+/* ===== Azure Services Page Styles ===== */
+
+body {
+    overflow-x: hidden;
+}
+
+/* Animation Container */
+.animation-container {
+    position: fixed;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    height: calc(100vh - 70px);
+    background: linear-gradient(135deg, #0078d4 0%, #003d7a 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    transition: opacity 0.5s ease;
+}
+
+.animation-container.hidden {
+    opacity: 0;
+    pointer-events: none;
+}
+
+/* Centered Logo */
+.center-logo {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: logoAppear 1s ease forwards;
+    z-index: 10;
+}
+
+.center-logo img {
+    width: 100%;
+    height: auto;
+    border: 4px solid rgba(255, 255, 255, 0.9);
+    border-radius: 20px;
+    padding: 15px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 0 40px rgba(0, 120, 212, 0.6),
+        0 0 80px rgba(255, 255, 255, 0.3);
+    filter: drop-shadow(0 0 30px rgba(0, 120, 212, 0.5));
+}
+
+@keyframes logoAppear {
+    from {
+        opacity: 0;
+        transform: scale(0.5);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* Logo moving to top */
+.center-logo.move-to-top {
+    animation: moveToTop 2.5s cubic-bezier(0.33, 0, 0.2, 1) forwards;
+    animation-delay: 1s;
+}
+
+.center-logo.move-to-top img {
+    transition: box-shadow 2.5s cubic-bezier(0.33, 0, 0.2, 1) 1s,
+        border-color 2.5s cubic-bezier(0.33, 0, 0.2, 1) 1s;
+    box-shadow: 0 0 60px rgba(0, 120, 212, 0.9),
+        0 0 120px rgba(255, 255, 255, 0.5),
+        0 10px 40px rgba(0, 0, 0, 0.3);
+    border-color: rgba(255, 255, 255, 1);
+}
+
+@keyframes moveToTop {
+    from {
+        transform: translateY(0) scale(1);
+        width: var(--initial-width, 200px);
+        height: var(--initial-height, 200px);
+    }
+
+    to {
+        transform: translateY(calc(120px - 50vh)) scale(0.6);
+        width: 120px;
+        height: 120px;
+    }
+}
+
+/* Circling Services */
+.circling-services {
+    position: absolute;
+    width: 400px;
+    height: 400px;
+    opacity: 0;
+    animation: servicesAppear 0.5s ease forwards;
+    animation-delay: 1s;
+    transition: filter 0.8s ease;
+}
+
+.circling-services.blur-services {
+    filter: blur(8px);
+    opacity: 0.4;
+}
+
+@keyframes servicesAppear {
+    to {
+        opacity: 1;
+    }
+}
+
+.service-icon {
+    position: absolute;
+    width: 140px;
+    height: 140px;
+    top: 50%;
+    left: 50%;
+    margin-top: -70px;
+    margin-left: -70px;
+    opacity: 0;
+}
+
+.icon-circle {
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: 700;
+    font-size: 0.85rem;
+    box-shadow: 0 8px 20px rgba(0, 120, 212, 0.3);
+    animation: orbit 4s linear infinite, iconPulse 2s ease-in-out infinite;
+    padding: 15px;
+    transition: all 0.3s ease;
+}
+
+.service-logo {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    animation: logoRotate 3s ease-in-out infinite alternate;
+    filter: drop-shadow(0 2px 8px rgba(0, 120, 212, 0.3));
+    transition: all 0.3s ease;
+}
+
+.service-logo:hover {
+    transform: scale(1.15);
+    filter: drop-shadow(0 0 20px rgba(0, 120, 212, 0.8)) drop-shadow(0 0 40px rgba(0, 120, 212, 0.6)) drop-shadow(0 0 60px rgba(0, 120, 212, 0.4));
+}
+
+@keyframes iconPulse {
+
+    0%,
+    100% {
+        box-shadow: 0 8px 20px rgba(0, 120, 212, 0.3);
+    }
+
+    50% {
+        box-shadow: 0 12px 30px rgba(0, 120, 212, 0.5);
+    }
+}
+
+@keyframes logoRotate {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.1);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes iconFadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.5);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* Dynamic service positioning - works for any number of services */
+.service-icon {
+    --start-angle: 0deg;
+    --end-angle: 360deg;
+}
+
+.service-icon:nth-child(1) {
+    animation: iconFadeIn 0.5s ease forwards, dynamicOrbit 4s linear infinite;
+    animation-delay: 1.2s, 1.7s;
+}
+
+.service-icon:nth-child(2) {
+    animation: iconFadeIn 0.5s ease forwards, dynamicOrbit 4s linear infinite;
+    animation-delay: 1.35s, 1.85s;
+}
+
+.service-icon:nth-child(3) {
+    animation: iconFadeIn 0.5s ease forwards, dynamicOrbit 4s linear infinite;
+    animation-delay: 1.5s, 2.0s;
+}
+
+.service-icon:nth-child(4) {
+    animation: iconFadeIn 0.5s ease forwards, dynamicOrbit 4s linear infinite;
+    animation-delay: 1.65s, 2.15s;
+}
+
+.service-icon:nth-child(5) {
+    animation: iconFadeIn 0.5s ease forwards, dynamicOrbit 4s linear infinite;
+    animation-delay: 1.8s, 2.3s;
+}
+
+.service-icon:nth-child(6) {
+    animation: iconFadeIn 0.5s ease forwards, dynamicOrbit 4s linear infinite;
+    animation-delay: 1.95s, 2.45s;
+}
+
+.service-icon:nth-child(7) {
+    animation: iconFadeIn 0.5s ease forwards, dynamicOrbit 4s linear infinite;
+    animation-delay: 2.1s, 2.6s;
+}
+
+.service-icon:nth-child(8) {
+    animation: iconFadeIn 0.5s ease forwards, dynamicOrbit 4s linear infinite;
+    animation-delay: 2.25s, 2.75s;
+}
+
+.service-icon:nth-child(9) {
+    animation: iconFadeIn 0.5s ease forwards, dynamicOrbit 4s linear infinite;
+    animation-delay: 2.4s, 2.9s;
+}
+
+.service-icon:nth-child(10) {
+    animation: iconFadeIn 0.5s ease forwards, dynamicOrbit 4s linear infinite;
+    animation-delay: 2.55s, 3.05s;
+}
+
+@keyframes dynamicOrbit {
+    from {
+        transform: rotate(var(--start-angle)) translateX(200px) rotate(calc(-1 * var(--start-angle)));
+    }
+
+    to {
+        transform: rotate(var(--end-angle)) translateX(200px) rotate(calc(-1 * var(--end-angle)));
+    }
+}
+
+/* Final State */
+.final-state {
+    opacity: 0;
+    pointer-events: none;
+    padding-top: 70px;
+    min-height: 100vh;
+    background: #f5f7fa;
+}
+
+.final-state.visible {
+    opacity: 1;
+    pointer-events: all;
+    animation: fadeIn 0.8s ease forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+/* Azure Header */
+.azure-header {
+    text-align: center;
+    padding: 20px;
+    background: white;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.header-logo {
+    width: 120px;
+    height: auto;
+    margin-bottom: 20px;
+    opacity: 0;
+    animation: headerLogoAppear 0.6s ease forwards;
+}
+
+.final-state.visible .header-logo {
+    animation-delay: 0.2s;
+}
+
+@keyframes headerLogoAppear {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.azure-title {
+    font-family: var(--font-display);
+    font-size: 2.5rem;
+    font-weight: 800;
+    background: linear-gradient(135deg, #0078d4 0%, #003d7a 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin: 0;
+    opacity: 0;
+    animation: titleAppear 0.6s ease forwards;
+}
+
+.final-state.visible .azure-title {
+    animation-delay: 0.4s;
+}
+
+@keyframes titleAppear {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Services Section */
+.services-section {
+    padding: 60px 20px;
+}
+
+.services-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 30px;
+}
+
+.service-card {
+    background: white;
+    border-radius: 20px;
+    padding: 40px 30px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    border: 1px solid rgba(0, 120, 212, 0.2);
+    transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+    opacity: 0;
+    transform: translateY(30px);
+    position: relative;
+    z-index: 1;
+}
+
+.final-state.visible .service-card {
+    animation: cardSlideIn 0.6s ease forwards;
+}
+
+.final-state.visible .service-card[data-index="0"] {
+    animation-delay: 0.6s;
+}
+
+.final-state.visible .service-card[data-index="1"] {
+    animation-delay: 0.75s;
+}
+
+.final-state.visible .service-card[data-index="2"] {
+    animation-delay: 0.9s;
+}
+
+.final-state.visible .service-card[data-index="3"] {
+    animation-delay: 1.05s;
+}
+
+.final-state.visible .service-card[data-index="4"] {
+    animation-delay: 1.2s;
+}
+
+.final-state.visible .service-card[data-index="5"] {
+    animation-delay: 1.35s;
+}
+
+.final-state.visible .service-card[data-index="6"] {
+    animation-delay: 1.5s;
+}
+
+.final-state.visible .service-card[data-index="7"] {
+    animation-delay: 1.65s;
+}
+
+.final-state.visible .service-card[data-index="8"] {
+    animation-delay: 1.8s;
+}
+
+.final-state.visible .service-card[data-index="9"] {
+    animation-delay: 1.95s;
+}
+
+@keyframes cardSlideIn {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.service-card:hover {
+    transform: translateY(-15px) scale(1.05);
+    box-shadow: 0 30px 60px rgba(0, 120, 212, 0.3),
+        0 15px 30px rgba(0, 120, 212, 0.2);
+    border-color: rgba(0, 120, 212, 0.7);
+    z-index: 10;
+}
+
+.service-icon-large {
+    width: 140px;
+    height: 140px;
+    margin: 0 auto 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.4s ease;
+}
+
+.icon-circle-large {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, #0078d4 0%, #003d7a 100%);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: 700;
+    font-size: 1.1rem;
+    box-shadow: 0 8px 20px rgba(0, 120, 212, 0.3);
+    transition: all 0.3s ease;
+}
+
+.service-logo-large {
+    width: 70%;
+    height: 70%;
+    object-fit: contain;
+    transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+    filter: drop-shadow(0 4px 12px rgba(0, 120, 212, 0.2));
+}
+
+.service-card:hover .service-icon-large {
+    transform: scale(1.2) rotate(0deg);
+}
+
+.service-card:hover .service-logo-large {
+    transform: scale(1.25);
+    filter: drop-shadow(0 0 25px rgba(0, 120, 212, 0.8)) drop-shadow(0 0 45px rgba(0, 120, 212, 0.6)) drop-shadow(0 0 65px rgba(0, 120, 212, 0.4));
+}
+
+.service-card:hover .icon-circle-large {
+    transform: scale(1.1);
+    box-shadow: 0 12px 30px rgba(0, 120, 212, 0.4);
+}
+
+.service-description {
+    font-size: 0.95rem;
+    color: #5a5a7a;
+    line-height: 1.6;
+    text-align: center;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .services-container {
+        grid-template-columns: 1fr;
+    }
+
+    .circling-services {
+        width: 300px;
+        height: 300px;
+    }
+}
