@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AWS Services | LesKode</title>
+    <link rel="stylesheet" href="/CSS/styles.css">
+    <link rel="stylesheet" href="/CSS/aws_services.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Poppins:wght@600;700;800;900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="logo-container">
+                <a href="home.html">
+                    <img src="/Asset/Leskode.png" alt="WKFU Logo" class="logo" id="wkfu-logo">
+                </a>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="home.html#home" class="nav-link">Home</a></li>
+                <li><a href="home.html#service" class="nav-link">Service</a></li>
+                <li><a href="home.html#projects" class="nav-link">Projects</a></li>
+                <li><a href="home.html#about" class="nav-link">About Us</a></li>
+                <li><a href="home.html#contact" class="nav-link">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Animation Container -->
+    <div class="animation-container" id="animationContainer">
+        <!-- Centered Logo (Initial State) -->
+        <div class="center-logo" id="centerLogo">
+            <img src="/Asset/aws-logo.png" alt="AWS">
+        </div>
+
+        <!-- Circling Services -->
+        <div class="circling-services" id="circlingServices">
+            <div class="service-icon" data-service="ec2">
+                <div class="icon-circle">
+                    <img src="/Asset/aws_ec2.png" alt="EC2" class="service-logo">
+                </div>
+            </div>
+            <div class="service-icon" data-service="lambda">
+                <div class="icon-circle">
+                    <img src="/Asset/aws_lambda.png" alt="Lambda" class="service-logo">
+                </div>
+            </div>
+            <div class="service-icon" data-service="batch">
+                <div class="icon-circle">
+                    <img src="/Asset/aws_batch.png" alt="Batch" class="service-logo">
+                </div>
+            </div>
+            <div class="service-icon" data-service="transcriber">
+                <div class="icon-circle">
+                    <img src="/Asset/aws_transcriber.png" alt="AWS Transcriber" class="service-logo">
+                </div>
+            </div>
+            <div class="service-icon" data-service="sagemaker">
+                <div class="icon-circle">
+                    <img src="/Asset/aws_sagemaker.png" alt="Sagemaker" class="service-logo">
+                </div>
+            </div>
+            <div class="service-icon" data-service="lex">
+                <div class="icon-circle">
+                    <img src="/Asset/aws_lex.png" alt="Lex" class="service-logo">
+                </div>
+            </div>
+            <div class="service-icon" data-service="s3">
+                <div class="icon-circle">
+                    <img src="/Asset/aws_s3.png" alt="S3" class="service-logo">
+                </div>
+            </div>
+            <div class="service-icon" data-service="dynamodb">
+                <div class="icon-circle">
+                    <img src="/Asset/aws_dynamodb.png" alt="DynamoDB" class="service-logo">
+                </div>
+            </div>
+            <div class="service-icon" data-service="ebs">
+                <div class="icon-circle">
+                    <img src="/Asset/aws_ebs.png" alt="EBS" class="service-logo">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Final State: Header with Logo and Cards -->
+    <div class="final-state" id="finalState">
+        <header class="aws-header">
+            <img src="/Asset/aws-logo.png" alt="AWS" class="header-logo">
+            <h1 class="aws-title">Our AWS Services</h1>
+        </header>
+
+        <section class="services-section">
+            <div class="services-container">
+                <div class="service-card" data-index="0">
+                    <div class="service-icon-large">
+                        <img src="/Asset/aws_ec2.png" alt="EC2" class="service-logo-large">
+                    </div>
+                    <p class="service-description">
+                        Amazon Elastic Compute Cloud (Amazon EC2) delivers scalable computing capability in the Amazon
+                        Web Services (AWS) Cloud.
+                    </p>
+                </div>
+
+                <div class="service-card" data-index="1">
+                    <div class="service-icon-large">
+                        <img src="/Asset/aws_lambda.png" alt="Lambda" class="service-logo-large">
+                    </div>
+                    <p class="service-description">
+                        Lambda is a compute service that lets you build applications that respond quickly to new
+                        information and events.
+                    </p>
+                </div>
+
+                <div class="service-card" data-index="2">
+                    <div class="service-icon-large">
+                        <img src="/Asset/aws_batch.png" alt="Batch" class="service-logo-large">
+                    </div>
+                    <p class="service-description">
+                        AWS Batch helps you to run batch computing workloads on the AWS Cloud.
+                    </p>
+                </div>
+
+                <div class="service-card" data-index="3">
+                    <div class="service-icon-large">
+                        <img src="/Asset/aws_transcriber.png" alt="AWS Transcriber" class="service-logo-large">
+                    </div>
+                    <p class="service-description">
+                        Amazon Transcribe is an ASR service that allows developers to easily integrate speech-to-text
+                        functionality to their apps.
+                    </p>
+                </div>
+
+                <div class="service-card" data-index="4">
+                    <div class="service-icon-large">
+                        <img src="/Asset/aws_sagemaker.png" alt="Sagemaker" class="service-logo-large">
+                    </div>
+                    <p class="service-description">
+                        A machine learning platform with integrated development, training, deployment, and analysis
+                        capabilities.
+                    </p>
+                </div>
+
+                <div class="service-card" data-index="5">
+                    <div class="service-icon-large">
+                        <img src="/Asset/aws_lex.png" alt="Lex" class="service-logo-large">
+                    </div>
+                    <p class="service-description">
+                        For creating speech and text-based conversational user interfaces for apps. AWS offers Amazon
+                        Lex.
+                    </p>
+                </div>
+
+                <div class="service-card" data-index="6">
+                    <div class="service-icon-large">
+                        <img src="/Asset/aws_s3.png" alt="S3" class="service-logo-large">
+                    </div>
+                    <p class="service-description">
+                        Amazon Simple Storage Service (Amazon S3) is an object storage service that provides
+                        industry-leading scalability, data availability, security, and performance.
+                    </p>
+                </div>
+
+                <div class="service-card" data-index="7">
+                    <div class="service-icon-large">
+                        <img src="/Asset/aws_dynamodb.png" alt="DynamoDB" class="service-logo-large">
+                    </div>
+                    <p class="service-description">
+                        Amazon DynamoDB is a fully managed, serverless, key-valued NoSQL database designed to run
+                        high-performance applications of any size.
+                    </p>
+                </div>
+
+                <div class="service-card" data-index="8">
+                    <div class="service-icon-large">
+                        <img src="/Asset/aws_ebs.png" alt="EBS" class="service-logo-large">
+                    </div>
+                    <p class="service-description">
+                        Amazon Elastic Block Store (Amazon EBS) is an easy-to-use, scalable, and high-performance block
+                        storage service designed for Amazon Elastic Compute Cloud (Amazon EC2).
+                    </p>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <script src="/JS/aws_services.js"></script>
+</body>
+
+</html>
