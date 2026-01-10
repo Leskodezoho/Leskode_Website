@@ -84,7 +84,7 @@ body {
     }
 
     to {
-        transform: translateY(calc(120px - 50vh)) scale(0.6);
+        transform: translateY(calc(-50vh + 80px)) scale(0.6);
         width: 120px;
         height: 120px;
     }
@@ -147,6 +147,7 @@ body {
     animation: logoRotate 3s ease-in-out infinite alternate;
     filter: drop-shadow(0 2px 8px rgba(0, 120, 212, 0.3));
     transition: all 0.3s ease;
+    border-radius: 50%;
 }
 
 .service-logo:hover {
@@ -262,7 +263,6 @@ body {
 .final-state {
     opacity: 0;
     pointer-events: none;
-    padding-top: 70px;
     min-height: 100vh;
     background: #f5f7fa;
 }
@@ -285,6 +285,7 @@ body {
 
 /* Azure Header */
 .azure-header {
+    margin-top: 60px;
     text-align: center;
     padding: 20px;
     background: white;
@@ -346,6 +347,7 @@ body {
 
 /* Services Section */
 .services-section {
+    margin-top: 0 !important;
     padding: 60px 20px;
 }
 

@@ -31,9 +31,9 @@
                 <img src="../Asset/Leskode.png" alt="WKFU Logo" class="logo" id="wkfu-logo">
             </div>
             <ul class="nav-menu">
-                <li><a href="home.html#home" class="nav-link">Home</a></li>
+                <li><a href="index.html#home" class="nav-link">Home</a></li>
                 <li><a href="services.html" class="nav-link">Service</a></li>
-                <li><a href="home.html#projects" class="nav-link">Projects</a></li>
+                <li><a href="index.html#projects" class="nav-link">Projects</a></li>
                 <li><a href="about.html" class="nav-link">About Us</a></li>
                 <li><a href="contact.html" class="nav-link active">Contact</a></li>
             </ul>
@@ -53,24 +53,9 @@
                 <!-- Contact Form -->
                 <div class="form-column">
                     <h2 class="section-heading">CONTACT US</h2>
-                    <form id="contactForm" class="contact-form">
-                        <div class="form-group">
-                            <input type="text" id="name" name="name" placeholder="Your Name" required>
-                        </div>
-                        <div class="form-group">
-                            <input type="email" id="email" name="email" placeholder="Your Email" required>
-                        </div>
-                        <div class="form-group">
-                            <input type="text" id="subject" name="subject" placeholder="Subject" required>
-                        </div>
-                        <div class="form-group">
-                            <input type="tel" id="mobile" name="mobile" placeholder="Mobile Number" required>
-                        </div>
-                        <div class="form-group">
-                            <textarea id="message" name="message" placeholder="Message" rows="5" required></textarea>
-                        </div>
-                        <button type="submit" class="submit-btn">Send Message</button>
-                    </form>
+                    <iframe aria-label='Leskode Contact Us Form' frameborder="0" scrolling="no"
+                        style="height:800px;width:99%;border:none;overflow:hidden;"
+                        src='https://forms.zohopublic.com/zsolves/form/LeskodeContactUsForm/formperma/1z5CWV2kcyHs1avRYngMDTzjAgJkTW-vQ8GqP9J0umk'></iframe>
                 </div>
 
                 <!-- Map Column -->
@@ -78,7 +63,7 @@
                     <h2 class="section-heading">FIND US</h2>
                     <div class="map-container">
                         <iframe
-                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3888.6532788847634!2d77.59373731482183!3d12.928524990885892!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae15a1b1b1b1b1%3A0x1b1b1b1b1b1b1b1b!2sBangalore%2C%20Karnataka!5e0!3m2!1sen!2sin!4v1234567890123!5m2!1sen!2sin"
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3916.0869841799944!2d77.05515757507686!3d10.979658889225895!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba857b80a9ee1a7%3A0x469adce5587ba1e!2sLESKODE%20%7C%20Zoho%20Authorized%20Partner%20%7C%20Zoho%20%2B%20AI%20solution%20expert!5e0!3m2!1sen!2sin!4v1736498575123!5m2!1sen!2sin"
                             width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
                             referrerpolicy="no-referrer-when-downgrade"></iframe>
                     </div>
@@ -99,7 +84,7 @@
                     </svg>
                 </div>
                 <h3 class="info-title">Address</h3>
-                <p class="info-text">123 Business Street<br>Bangalore, Karnataka<br>India - 560001</p>
+                <p class="info-text">Coimbatore<br>Tamil Nadu<br>India</p>
             </div>
 
             <div class="info-card">
@@ -111,7 +96,7 @@
                     </svg>
                 </div>
                 <h3 class="info-title">Email</h3>
-                <p class="info-text">info@wkfu.com<br>support@wkfu.com</p>
+                <p class="info-text">info@leskode.com</p>
             </div>
 
             <div class="info-card">
@@ -123,7 +108,7 @@
                     </svg>
                 </div>
                 <h3 class="info-title">Phone</h3>
-                <p class="info-text">+91 1234567890<br>+91 0987654321</p>
+                <p class="info-text">+91 9500424307</p>
             </div>
         </div>
     </section>
@@ -154,37 +139,6 @@
 
         // Generate shooting stars periodically
         setInterval(createShootingStar, 2000);
-
-        // Form submission handler
-        document.getElementById('contactForm').addEventListener('submit', function (e) {
-            e.preventDefault();
-
-            // Get form values
-            const name = document.getElementById('name').value;
-            const email = document.getElementById('email').value;
-            const subject = document.getElementById('subject').value;
-            const mobile = document.getElementById('mobile').value;
-            const message = document.getElementById('message').value;
-
-            // Simple validation
-            if (!name || !email || !subject || !mobile || !message) {
-                alert('Please fill in all fields');
-                return;
-            }
-
-            // Email validation
-            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-            if (!emailRegex.test(email)) {
-                alert('Please enter a valid email address');
-                return;
-            }
-
-            // Success message
-            alert('Thank you for contacting us! We will get back to you soon.');
-
-            // Reset form
-            this.reset();
-        });
 
         // Animate sections on scroll
         const observerOptions = {

@@ -17,7 +17,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // Apply dynamic positioning to each service
     serviceIcons.forEach((service, index) => {
-        const angle = index * angleStep;
+        const angle = index * 58;
         service.style.setProperty('--start-angle', `${angle}deg`);
         service.style.setProperty('--end-angle', `${angle + 360}deg`);
         console.log(`Service ${index}: Start angle = ${angle}°, End angle = ${angle + 360}°`);
