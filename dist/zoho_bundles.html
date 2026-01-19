@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zoho Services | LesKode</title>
+    <link rel="stylesheet" href="CSS/styles.css">
+    <link rel="stylesheet" href="CSS/zoho_bundles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Poppins:wght@600;700;800;900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="logo-container">
+                <a href="index.html">
+                    <img src="Asset/Leskode.png" alt="WKFU Logo" class="logo" id="wkfu-logo">
+                </a>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html#home" class="nav-link">Home</a></li>
+                <li><a href="index.html#service" class="nav-link">Service</a></li>
+                <li><a href="index.html#projects" class="nav-link">Projects</a></li>
+                <li><a href="index.html#about" class="nav-link">About Us</a></li>
+                <li><a href="index.html#contact" class="nav-link">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Animation Container -->
+    <div class="animation-container" id="animationContainer">
+        <!-- Centered Logo (Initial State) -->
+        <div class="center-logo" id="centerLogo">
+            <img src="Asset/zoho-logo.png" alt="LesKode">
+        </div>
+
+        <!-- Circling Bundles -->
+        <div class="circling-bundles" id="circlingBundles">
+            <div class="bundle-icon" data-bundle="crm">
+                <div class="icon-circle">
+                    <img src="Asset/zoho_crm_official.png" alt="CRM" class="bundle-logo">
+                </div>
+            </div>
+            <div class="bundle-icon" data-bundle="books">
+                <div class="icon-circle">
+                    <img src="Asset/zoho_books_official.png" alt="Books" class="bundle-logo">
+                </div>
+            </div>
+            <div class="bundle-icon" data-bundle="people">
+                <div class="icon-circle">
+                    <img src="Asset/zoho_people_official.png" alt="People" class="bundle-logo">
+                </div>
+            </div>
+            <div class="bundle-icon" data-bundle="desk">
+                <div class="icon-circle">
+                    <img src="Asset/zoho_desk_official.png" alt="Desk" class="bundle-logo">
+                </div>
+            </div>
+            <div class="bundle-icon" data-bundle="campaigns">
+                <div class="icon-circle">
+                    <img src="Asset/zoho_campaigns_official.png" alt="Campaigns" class="bundle-logo">
+                </div>
+            </div>
+            <div class="bundle-icon" data-bundle="analytics">
+                <div class="icon-circle">
+                    <img src="Asset/zoho_analytics_official.png" alt="Analytics" class="bundle-logo">
+                </div>
+            </div>
+            <div class="bundle-icon" data-bundle="projects">
+                <div class="icon-circle">
+                    <img src="Asset/zoho_projects_official.png" alt="Projects" class="bundle-logo">
+                </div>
+            </div>
+            <div class="bundle-icon" data-bundle="inventory">
+                <div class="icon-circle">
+                    <img src="Asset/zoho_Inventory_official.png" alt="Inventory" class="bundle-logo">
+                </div>
+            </div>
+            <div class="bundle-icon" data-bundle="mail">
+                <div class="icon-circle">
+                    <img src="Asset/zoho_mail_official.png" alt="Mail" class="bundle-logo">
+                </div>
+            </div>
+            <div class="bundle-icon" data-bundle="creator">
+                <div class="icon-circle">
+                    <img src="Asset/zoho_creator_official.webp" alt="Creator" class="bundle-logo">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Final State: Header with Logo and Cards -->
+    <div class="final-state" id="finalState">
+        <header class="zoho-header">
+            <img src="Asset/zoho-logo.png" alt="LesKode" class="header-logo">
+            <h1 class="zoho-title">Our Zoho Services</h1>
+        </header>
+
+        <section class="bundles-section">
+            <div class="bundles-container">
+                <div class="bundle-card" data-index="0">
+                    <div class="bundle-icon-large">
+                        <img src="Asset/zoho_crm_official.png" alt="CRM" class="bundle-logo-large">
+                    </div>
+                    <p class="bundle-description">
+                        Manage your customer relationships with powerful sales automation, analytics, and multi-channel
+                        communication.
+                    </p>
+                </div>
+
+                <div class="bundle-card" data-index="1">
+                    <div class="bundle-icon-large">
+                        <img src="Asset/zoho_books_official.png" alt="Books" class="bundle-logo-large">
+                    </div>
+                    <p class="bundle-description">
+                        Complete accounting software to manage finances, track expenses, and generate insightful
+                        reports.
+                    </p>
+                </div>
+
+                <div class="bundle-card" data-index="2">
+                    <div class="bundle-icon-large">
+                        <img src="Asset/zoho_people_official.png" alt="People" class="bundle-logo-large">
+                    </div>
+                    <p class="bundle-description">
+                        Streamline HR processes with employee management, attendance tracking, and performance reviews.
+                    </p>
+                </div>
+
+                <div class="bundle-card" data-index="3">
+                    <div class="bundle-icon-large">
+                        <img src="Asset/zoho_desk_official.png" alt="Desk" class="bundle-logo-large">
+                    </div>
+                    <p class="bundle-description">
+                        Deliver exceptional customer support with ticketing, automation, and multi-channel help desk.
+                    </p>
+                </div>
+
+                <div class="bundle-card" data-index="4">
+                    <div class="bundle-icon-large">
+                        <img src="Asset/zoho_campaigns_official.png" alt="Campaigns" class="bundle-logo-large">
+                    </div>
+                    <p class="bundle-description">
+                        Create, send, and track email marketing campaigns with advanced segmentation and analytics.
+                    </p>
+                </div>
+
+                <div class="bundle-card" data-index="5">
+                    <div class="bundle-icon-large">
+                        <img src="Asset/zoho_analytics_official.png" alt="Analytics" class="bundle-logo-large">
+                    </div>
+                    <p class="bundle-description">
+                        Transform data into insights with powerful business intelligence and reporting tools.
+                    </p>
+                </div>
+
+                <div class="bundle-card" data-index="6">
+                    <div class="bundle-icon-large">
+                        <img src="Asset/zoho_projects_official.png" alt="Projects" class="bundle-logo-large">
+                    </div>
+                    <p class="bundle-description">
+                        Plan, track, and collaborate on projects with task management, timesheets, and Gantt charts.
+                    </p>
+                </div>
+
+                <div class="bundle-card" data-index="7">
+                    <div class="bundle-icon-large">
+                        <img src="Asset/zoho_Inventory_official.png" alt="Inventory" class="bundle-logo-large">
+                    </div>
+                    <p class="bundle-description">
+                        Manage inventory, orders, and warehouses with real-time tracking and automation.
+                    </p>
+                </div>
+
+                <div class="bundle-card" data-index="8">
+                    <div class="bundle-icon-large">
+                        <img src="Asset/zoho_mail_official.png" alt="Mail" class="bundle-logo-large">
+                    </div>
+                    <p class="bundle-description">
+                        Secure business email with ad-free interface, collaboration tools, and mobile access.
+                    </p>
+                </div>
+
+                <div class="bundle-card" data-index="9">
+                    <div class="bundle-icon-large">
+                        <img src="Asset/zoho_creator_official.webp" alt="Creator" class="bundle-logo-large">
+                    </div>
+                    <p class="bundle-description">
+                        Build custom applications with low-code platform, drag-and-drop interface, and automation.
+                    </p>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <script src="JS/zoho_bundles.js"></script>
+</body>
+
+</html>

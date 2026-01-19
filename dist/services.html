@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Our Services - We Kode For You offers comprehensive digital transformation solutions including Zoho integration, cloud services, and custom development.">
+    <title>Our Services - WKFU | We Kode For You</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Outfit:wght@700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="CSS/styles.css">
+    <link rel="stylesheet" href="CSS/services.css">
+</head>
+
+<body>
+    <!-- Animated Background -->
+    <div class="animated-background" id="animatedBg"></div>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="logo-container">
+                <img src="Asset/Leskode.png" alt="WKFU Logo" class="logo" id="wkfu-logo">
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html#home" class="nav-link">Home</a></li>
+                <li><a href="services.html" class="nav-link active">Service</a></li>
+                <li><a href="index.html#projects" class="nav-link">Projects</a></li>
+                <li><a href="about.html" class="nav-link">About Us</a></li>
+                <li><a href="contact.html" class="nav-link">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Banner -->
+    <section class="services-hero">
+        <div class="hero-overlay"></div>
+        <h1 class="hero-title">SERVICE</h1>
+    </section>
+
+    <!-- What We Love To Do Section -->
+    <section class="what-we-do-section">
+        <div class="what-we-do-container">
+            <h2 class="section-heading">WHAT WE LOVE TO DO</h2>
+            <p class="section-description">
+                Are you planning to reinforce your business ideas? Then you have come to the right place. We are a
+                decisive partner of Zoho kindle
+                up your business ideas and solve automation problems. We make sure that the every step you take with us
+                is beneficial to you. With
+                our finest services, we ensure that you taste the essence of success. We are so much keen on providing
+                you with executive
+                consulting, development ideas, immerse training and enduring support.
+            </p>
+
+            <!-- Services Grid -->
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <img src="Asset/integration-icon.png" alt="Integration" onerror="this.style.display='none'">
+                    </div>
+                    <h3 class="service-card-title">Integration Services</h3>
+                    <p class="service-card-description">
+                        Seamlessly connect your business systems and applications for unified operations. We ensure
+                        smooth data flow across all your platforms.
+                    </p>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">
+                        <img src="Asset/cloud-icon.png" alt="Cloud Solutions" onerror="this.style.display='none'">
+                    </div>
+                    <h3 class="service-card-title">Cloud Solutions</h3>
+                    <p class="service-card-description">
+                        Scalable cloud infrastructure designed to grow with your business needs. Leverage AWS, Azure,
+                        and other leading platforms.
+                    </p>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">
+                        <img src="Asset/zoho-logo.png" alt="Zoho Products">
+                    </div>
+                    <h3 class="service-card-title">Zoho Implementation</h3>
+                    <p class="service-card-description">
+                        Expert implementation and customization of Zoho's comprehensive suite. From CRM to Finance,
+                        we've got you covered.
+                    </p>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">
+                        <img src="Asset/custom-icon.png" alt="Custom Development"
+                            onerror="this.style.display='none'">
+                    </div>
+                    <h3 class="service-card-title">Custom Development</h3>
+                    <p class="service-card-description">
+                        Tailored software solutions built specifically for your unique requirements. We turn your vision
+                        into reality.
+                    </p>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">
+                        <img src="Asset/consulting-icon.png" alt="Consulting" onerror="this.style.display='none'">
+                    </div>
+                    <h3 class="service-card-title">Executive Consulting</h3>
+                    <p class="service-card-description">
+                        Strategic guidance to help you make informed decisions about your digital transformation
+                        journey.
+                    </p>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">
+                        <img src="Asset/training-icon.png" alt="Training" onerror="this.style.display='none'">
+                    </div>
+                    <h3 class="service-card-title">Training & Support</h3>
+                    <p class="service-card-description">
+                        Comprehensive training programs and ongoing support to ensure your team maximizes the value of
+                        our solutions.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- JavaScript -->
+    <script>
+        // Navbar scroll effect
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+
+        // Create shooting stars
+        function createShootingStar() {
+            const star = document.createElement('div');
+            star.className = 'shooting-star';
+            star.style.left = Math.random() * 100 + '%';
+            star.style.top = Math.random() * 50 + '%';
+            star.style.animationDelay = Math.random() * 3 + 's';
+            document.getElementById('animatedBg').appendChild(star);
+
+            setTimeout(() => star.remove(), 3000);
+        }
+
+        // Generate shooting stars periodically
+        setInterval(createShootingStar, 2000);
+
+        // Animate service cards on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -100px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate-in');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.service-card').forEach(card => {
+            observer.observe(card);
+        });
+    </script>
+
+    <!-- Footer Section -->
+    <footer class="footer-section">
+        <div class="footer-container">
+            <!-- Column 1: Company Info -->
+            <div class="footer-column footer-company">
+                <img src="Asset/Leskode-Zoho.png" alt="Leskode Zoho Partnership" class="footer-partner-badge">
+            </div>
+
+            <!-- Column 2: Quick Links -->
+            <div class="footer-column">
+                <h3 class="footer-heading">Quick Links</h3>
+                <ul class="footer-links">
+                    <li><a href="index.html#home">Home</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="index.html#projects">Projects</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+
+            <!-- Column 3: Services -->
+            <div class="footer-column">
+                <h3 class="footer-heading">Our Services</h3>
+                <ul class="footer-links">
+                    <li><a href="zoho_bundles.html">Zoho Solutions</a></li>
+                    <li><a href="aws_services.html">AWS Services</a></li>
+                    <li><a href="azure_services.html">Azure Services</a></li>
+                    <li><a href="services.html">Integration</a></li>
+                    <li><a href="services.html">Custom Development</a></li>
+                </ul>
+            </div>
+
+            <!-- Column 4: Contact Info -->
+            <div class="footer-column">
+                <h3 class="footer-heading">Get In Touch</h3>
+                <div class="footer-contact-info">
+                    <div class="contact-item">
+                        <svg class="contact-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2">
+                            <path
+                                d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z">
+                            </path>
+                        </svg>
+                        <a href="tel:+919500424307">+91 9500424307</a>
+                    </div>
+                    <div class="contact-item">
+                        <svg class="contact-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2">
+                            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z">
+                            </path>
+                            <polyline points="22,6 12,13 2,6"></polyline>
+                        </svg>
+                        <a href="mailto:info@leskode.com">info@leskode.com</a>
+                    </div>
+                    <div class="contact-item">
+                        <svg class="contact-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="12" r="10"></circle>
+                            <line x1="2" y1="12" x2="22" y2="12"></line>
+                            <path
+                                d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z">
+                            </path>
+                        </svg>
+                        <a href="https://leskode.com" target="_blank" rel="noopener noreferrer">leskode.com</a>
+                    </div>
+                    <div class="contact-item">
+                        <svg class="contact-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                            fill="currentColor">
+                            <path
+                                d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+                        </svg>
+                        <a href="https://www.linkedin.com/company/leskode" target="_blank"
+                            rel="noopener noreferrer">LinkedIn</a>
+                    </div>
+                    <div class="contact-item">
+                        <svg class="contact-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2">
+                            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                            <circle cx="12" cy="10" r="3"></circle>
+                        </svg>
+                        <span>Coimbatore, Tamil Nadu, India</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Copyright -->
+        <div class="footer-bottom">
+            <div class="footer-bottom-content">
+                <p>&copy; 2026 Leskode. All rights reserved.</p>
+                <div class="footer-bottom-links">
+                    <a href="#">Privacy Policy</a>
+                    <span class="separator">|</span>
+                    <a href="#">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
